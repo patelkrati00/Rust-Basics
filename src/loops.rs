@@ -11,7 +11,7 @@ pub fn loops(){
 fn get_first_word( sentence: String) -> String{
     let mut ans = String::from("");
     for ch in sentence.chars(){
-        ans.push_str(ch.to_string().as_str());
+        ans.push_str(ch.to_string().as_str()); 
         if ch == ' '{
             break ;
         }
