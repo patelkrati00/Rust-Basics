@@ -16,15 +16,28 @@ pub fn own() {
 }
 
 // another way to change ownership is by passing a value to a function
+// pub fn takes_ownership(){
+//     let my_string = String::from("change ownership by passing to a function");
+//     changeownership(my_string);
+//     // my_string is no longer valid here because ownership has been moved to the function
+//     // println!("{}", my_string); // ERROR
+// }
+
+// fn changeownership(s: String) {
+//     println!("{}", s); // s is the owner of the string now
+//     // s goes out of scope here and the memory is freed
+// }
+
 pub fn takes_ownership(){
-    let my_string = String::from("change ownership by passing to a function");
-    changeownership(my_string);
-    // my_string is no longer valid here because ownership has been moved to the function
-    // println!("{}", my_string); // ERROR
+    let mut my_string = String::from("change ownership by passing to a function");
+    my_string = changeownership(my_string);
+    // my_string is valid here because ownership has been moved to the function then again returned back to my_string
+    println!("{}", my_string); 
 }
 
-fn changeownership(s: String) {
+fn changeownership(s: String)->String{
     println!("{}", s); // s is the owner of the string now
-    // s goes out of scope here and the memory is freed
+    s //Rihanna example
 }
+
 
