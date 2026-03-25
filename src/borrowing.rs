@@ -31,7 +31,7 @@ fn update_string(s: &mut String){
     s.push_str("updating my_string");
 }
 
-//hanky panky example
+//hanky panky example (refer rules for borrowing)
 
 // pub fn hanky_panky(){
 //     let mut my_string = String::from("hanky Panky example");
