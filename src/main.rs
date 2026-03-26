@@ -3,6 +3,7 @@ mod loops;
 mod ownership;
 mod borrowing;
 mod rules_for_borrowing;
+mod structs;
 fn main() {
     variables::show();
     loops::loops();
@@ -11,5 +12,7 @@ fn main() {
     borrowing::borrow();
     borrowing::bor_variable();
     borrowing::mutable_borrow();
+    structs::info();
+    structs::print_area();
    
  }
