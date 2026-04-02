@@ -1,9 +1,12 @@
-mod variables;
+mod borrowing;
+mod enums;
 mod loops;
 mod ownership;
-mod borrowing;
 mod rules_for_borrowing;
 mod structs;
+mod variables;
+use crate::enums::{Shape, cal_area};
+
 fn main() {
     variables::show();
     loops::loops();
@@ -14,5 +17,7 @@ fn main() {
     borrowing::mutable_borrow();
     structs::info();
     structs::print_area();
-   
- }
+    let circle = Shape::Circle(7.0);
+     let area = cal_area(circle);
+    println!("Area is: {}", area);
+}
