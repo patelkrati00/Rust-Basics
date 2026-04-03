@@ -6,6 +6,7 @@ mod rules_for_borrowing;
 mod structs;
 mod variables;
 use crate::enums::{Shape, cal_area};
+mod error_handling;
 
 fn main() {
     variables::show();
@@ -18,6 +19,8 @@ fn main() {
     structs::info();
     structs::print_area();
     let circle = Shape::Circle(7.0);
-     let area = cal_area(circle);
+    let area = cal_area(circle);
     println!("Area is: {}", area);
+    let result = error_handling::divide(15, 0);
+    print!("Result: {:?}", result);
 }

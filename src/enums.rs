@@ -26,7 +26,7 @@ pub enum Shape {
 }
 
 pub fn cal_area(shape: Shape) -> f64 {
-    match shape {
+    match shape {  //pattern matching
         Shape::Circle(radius) => 3.14 * radius* radius,
         Shape::Square(side) => side * side,
         Shape::Rectangle(width, height) => width * height,
